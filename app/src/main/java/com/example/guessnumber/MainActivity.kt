@@ -3,6 +3,8 @@ package com.example.guessnumber
 
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 
 import android.view.View
 import androidx.activity.enableEdgeToEdge
@@ -26,8 +28,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        setSupportActionBar(binding.toolbar)
         val view = binding.root
         setContentView(view)
+
+
 
         startGame()
 
@@ -43,6 +48,18 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean{
+        menuInflater.inflate(R.menu.option_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (R.id.xxx == item.itemId){
+            max++
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun generateNumber(): Int{
