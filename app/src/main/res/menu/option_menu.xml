@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:title="settings1"
-        android:icon="@drawable/win"
+        android:icon="@drawable/baseline_settings_24"
         app:showAsAction="ifRoom"
         android:id="@+id/xxx"
         >

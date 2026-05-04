@@ -26,6 +26,7 @@
     android:id="@+id/attText"
     android:layout_marginTop="30dp"
     android:layout_marginHorizontal="20dp"
+    android:fontFamily="monospace"
 />
     <EditText
         android:layout_width="match_parent"
